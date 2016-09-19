@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/tmp/hjiannan/testBench_auto/spectre/schematic'
+let g:netrw_dirhist_2='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/mooredav/scripts/dco_design_tool_test/verilog/input.ahdlSimDB'
+let g:netrw_dirhist_3='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/mooredav/scripts/dco_design_tool_test/xmlInput'
+let g:netrw_dirhist_4='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/mooredav/verilog'
+let g:netrw_dirhist_5='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/mooredav/scripts/dco_design_tool_test/dcodesigner.egg-info'
+let g:netrw_dirhist_6='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/mooredav/scripts/dco_design_tool_test/xmlInput'
+let g:netrw_dirhist_7='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/yuhuang/digital_flow/DCO_flow/sources/config/TSMC_CRN65LP_1P9M6X2Z/local-tech'
+let g:netrw_dirhist_8='/net/waterloo/home/work/Movellus/TSMC_CRN65LP_2015/Parthenon/engineers/yuhuang/digital_flow/DCO_flow/sources/config/TSMC_CRN65LP_1P9M6X2Z/local-tools'
