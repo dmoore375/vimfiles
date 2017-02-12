@@ -6,6 +6,12 @@ set nocompatible
 set t_Co=256
 colorscheme Monokai 
 
+if &term =~ '256Color'
+	" Disable Background Color Erase (BCE) so that color schemes
+	" work properly when Vim is used inside tmux and GNU screen.
+	set t_ut=
+endif
+
 :set number
 :set mouse=a
 :set showcmd
@@ -18,10 +24,11 @@ colorscheme Monokai
 :set wildmenu
 :set textwidth=0 wrapmargin=0
 :set hidden
+:set guioptions+=m
 
-:nnoremap <C-n> :bnext<CR>
-:nnoremap <C-p> :bprevious<CR>
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+":nnoremap <C-n> :bnext<CR>
+":nnoremap <C-p> :bprevious<CR>
+":nnoremap <F5> :buffers<CR>:buffer<Space>
 ":nnoremap gf <C-W>gf
 :vnoremap // y/<C-R>"<CR>
 :inoremap jk <Esc>
@@ -32,7 +39,23 @@ if !exists(":DiffOrig")
 endif
 
 autocmd BufNewFile,BufRead *.ocn set filetype=skill
+
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'python-mode/python-mode'
+Plug 'justinmk/vim-sneak'
+Plug 'unblevable/quick-scope'
+Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-perl/vim-perl'
+Plug 'vhda/verilog_systemverilog.vim'
 
 call plug#end()
+
+
+:let g:airline#extensions#tabline#enabled=1
+:let g:airline_powerline_fonts = 1
 
