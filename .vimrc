@@ -15,9 +15,14 @@ colorscheme Monokai
 :set wildmode=longest,list,full
 :set wildmenu
 :set textwidth=0 wrapmargin=0
+:set hidden
 
-:nnoremap gf <C-W>gf
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+":nnoremap gf <C-W>gf
 :vnoremap // y/<C-R>"<CR>
+:inoremap jk <Esc>
 
 if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
@@ -25,3 +30,4 @@ if !exists(":DiffOrig")
 endif
 
 autocmd BufNewFile,BufRead *.ocn set filetype=skill
+
