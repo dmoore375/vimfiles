@@ -1,15 +1,17 @@
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nocompatible
 
+set t_Co=256
 colorscheme Monokai 
 
 :set number
 :set mouse=a
 :set showcmd
 :set ruler
-:set tabstop=4 shiftwidth=4
+:set tabstop=4 softtabstop=4 shiftwidth=4
+:set noexpandtab
 :set clipboard=unnamed
 :set clipboard=unnamedplus
 :set wildmode=longest,list,full
@@ -30,4 +32,7 @@ if !exists(":DiffOrig")
 endif
 
 autocmd BufNewFile,BufRead *.ocn set filetype=skill
+call plug#begin('~/.vim/plugged')
+
+call plug#end()
 
