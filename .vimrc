@@ -25,6 +25,8 @@ endif
 :set textwidth=0 wrapmargin=0
 :set hidden
 :set guioptions+=m
+:set winaltkeys=no
+:set guifont=Source\ Code\ Pro\ Medium\ 10
 
 ":nnoremap <C-n> :bnext<CR>
 ":nnoremap <C-p> :bprevious<CR>
@@ -42,6 +44,7 @@ autocmd BufNewFile,BufRead *.ocn set filetype=skill
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 Plug 'python-mode/python-mode'
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
@@ -49,7 +52,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe', { 'do': '.install.py' }
 Plug 'vim-perl/vim-perl'
 Plug 'vhda/verilog_systemverilog.vim'
 
@@ -57,5 +60,8 @@ call plug#end()
 
 
 :let g:airline#extensions#tabline#enabled=1
-:let g:airline_powerline_fonts = 1
+
+if has('gui_running')
+	:let g:airline_powerline_fonts = 1
+endif
 
