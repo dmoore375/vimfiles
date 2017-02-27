@@ -34,6 +34,7 @@ endif
 ":nnoremap gf <C-W>gf
 :vnoremap // y/<C-R>"<CR>
 :inoremap jk <Esc>
+:map <Space> <leader>
 
 if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
@@ -49,12 +50,15 @@ Plug 'python-mode/python-mode'
 Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'Valloric/YouCompleteMe', { 'do': '.install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-perl/vim-perl'
 Plug 'vhda/verilog_systemverilog.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -65,3 +69,4 @@ if has('gui_running')
 	:let g:airline_powerline_fonts = 1
 endif
 
+:let g:buffergator_autoexpand_on_split = 0
