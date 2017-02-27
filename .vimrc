@@ -26,7 +26,7 @@ endif
 :set hidden
 :set guioptions+=m
 :set winaltkeys=no
-:set guifont=Source\ Code\ Pro\ Medium\ 10
+":set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
 
 ":nnoremap <C-n> :bnext<CR>
 ":nnoremap <C-p> :bprevious<CR>
